@@ -45,6 +45,7 @@
 
             vm.select = function(card){
                 vm.car = card;
+                vm.car.year = new Date(card.year);
                 console.log(vm.car);
             };
 

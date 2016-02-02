@@ -43,7 +43,6 @@
             vm.select = function(client){
                 vm.cl = client;
                 vm.cl.date = new Date(client.date);
-                console.log(client);
                 console.log(vm.cl);
             };
 

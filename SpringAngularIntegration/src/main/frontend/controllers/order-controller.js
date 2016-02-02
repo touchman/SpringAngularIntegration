@@ -45,6 +45,7 @@
 
             vm.select = function(order){
                 vm.ord = order;
+                vm.ord.date = new Date(order.date);
                 console.log(vm.ord);
             };
 
