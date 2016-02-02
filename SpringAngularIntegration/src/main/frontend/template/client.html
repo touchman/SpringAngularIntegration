@@ -1,0 +1,48 @@
+<div class="container" ng-controller="clientController as vm">
+    <h3 align="center">List of clients:</h3>
+    <table class="table table-bordered" align="center">
+        <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Date</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <th><input type="text" name="firstName" ng-model="vm.cl.firstName"></th>
+            <th><input type="text" name="lastName" ng-model="vm.cl.lastName"></th>
+            <th><input type="date" name="date" ng-model="vm.cl.date"></th>
+            <th><input type="text" name="address" ng-model="vm.cl.address"></th>
+            <th><input type="text" name="email" ng-model="vm.cl.email"></th>
+            <th><input type="text" name="phone" ng-model="vm.cl.phone"></th>
+            <th>
+                <button type="submit" class="btn btn-default" ng-click="vm.add(vm.cl)">Add</button>
+            </th>
+            <th>
+                <button type="button" class="btn btn-default" ng-click="vm.update(vm.cl)">Update</button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="client in vm.clients">
+            <td>{{client.firstName}}</td>
+            <td>{{client.lastName}}</td>
+            <td>{{client.date}}</td>
+            <td>{{client.address}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.phone}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="vm.remove(client.id)">Delete</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-default" ng-click="vm.select(client)">Select</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-default" ng-click="vm.getCard(client.id)">Card</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
