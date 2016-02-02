@@ -1,5 +1,6 @@
 # SpringAngularIntegration
-Start server from JVM use Spring MVC in Controller package.
+The server starts from JVM use Spring MVC in Controller package.
 I am launching angularjs server in few steps from git:
+<br/>
 "cd /frontend" package
-"http-server" starts server.
+"http-server" starts the server.
