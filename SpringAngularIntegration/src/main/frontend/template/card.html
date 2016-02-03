@@ -10,10 +10,13 @@
             <th></th>
         </tr>
         <tr>
-            <th><input type="text" name="make" ng-model="vm.car.make"></th>
-            <th><input type="text" name="model" ng-model="vm.car.model"></th>
+            <th><input type="text" name="make" ng-model="vm.car.make" ng-pattern="/^\w+$/" class="my-input"
+                       aria-describedby="inputDescription"></th>
+            <th><input type="text" name="model" ng-model="vm.car.model" ng-pattern="/^\w+$/" class="my-input"
+                       aria-describedby="inputDescription"></th>
             <th><input type="date" name="year" ng-model="vm.car.year"></th>
-            <th><input type="text" name="vin" ng-model="vm.car.vin"></th>
+            <th><input type="text" name="vin" ng-model="vm.car.vin" ng-pattern="/^\d+$/" class="my-input"
+                       aria-describedby="inputDescription"></th>
             <th>
                 <button type="submit" class="btn btn-default" ng-click="vm.add(vm.car)">Add</button>
                 <button type="button" class="btn btn-default" ng-click="vm.update(vm.car)">Update</button>
