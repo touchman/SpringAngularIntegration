@@ -20,5 +20,8 @@ angular.module('service', ['client.Controller', 'order.Controller', 'card.Contro
         .when('/order/:orderId', {
             templateUrl: 'template/order.html',
             controller: 'orderController'
+        })
+        .otherwise({
+            redirectTo: '/client'
         });
 }]);
